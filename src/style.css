@@ -4,11 +4,28 @@
   box-sizing: border-box;
 }
 
+#app {
+  min-width: 500px;
+  overflow-x: auto;
+}
+
 html, body {
   width: 100%;
   height: 100%;
   background-color: #eee;
-  color:#eee;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+body {
+  background: #eee;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-y: auto;
+  overflow-x: auto;
 }
 
 h1 {
@@ -20,4 +37,5 @@ button {
   background: none;
   font: inherit;
   padding: 5px 7px;
+  width: 150px;
 }

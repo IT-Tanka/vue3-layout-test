@@ -1,14 +1,14 @@
 <template>
-  <div class="wrapper">
-    <Header />
-    <div class="layout">
-      <Content />
-      <Transition name="fade" appear>
-        <Sidebar v-if="showSidebar" />
-      </Transition>
+    <div class="wrapper">
+      <Header />
+      <div class="layout">
+        <Content />
+        <Transition name="fade" appear>
+          <Sidebar v-if="showSidebar" />
+        </Transition>
+      </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
 </template>
 
 <script setup>
@@ -26,27 +26,23 @@ onUnmounted(() => window.removeEventListener('resize', updateSidebar));
 </script>
 
 <style>
-body {
-  background: #eee;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  overflow-y: auto;
-}
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  overflow-x: auto;
-}
-.layout {
-  display: flex;
-  max-width: 800px;
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
   min-width: 500px;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  box-sizing: border-box;
 }
 
+.layout {
+  display: flex;
+  width: 100%;
+  min-width: 500px;
+  background: #fff;
+}
 </style>

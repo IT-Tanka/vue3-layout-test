@@ -5,7 +5,8 @@
       <li v-for="user in users" :key="user.id">
         <div class="li_row">
           {{ user.name }}
-          <button @click="toggleDetails(user.id)">{{ !user.showDetails ? 'Показати деталі' : 'Приховати деталі' }}</button>
+          <button @click="toggleDetails(user.id)">{{ !user.showDetails ? 'Показати деталі' : 'Приховати деталі'
+            }}</button>
         </div>
         <div v-if="user.showDetails">Email: {{ user.email }}, Phone: {{ user.phone }}</div>
       </li>
@@ -31,20 +32,16 @@ onMounted(fetchUsers);
 <style>
 .content {
   flex: 1;
-  padding:30px 20px;
+  padding: 30px 20px;
   min-height: calc(100vh - 100px);
   color: black;
-}
-
-button {
-  width: 150px;
 }
 
 ul {
   padding: 10px;
 }
 
-li{
+li {
   margin-bottom: 20px;
 }
 
